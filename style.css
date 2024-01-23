@@ -267,6 +267,18 @@ header .s-trigger i.ri-close-line,
   background-color: #ff25254a;
 }
 
+/* 02 slider */
+
+main > div {
+  position: relative;
+  padding: 5em 0;
+}
+
+.hero {
+  color: var(--white-color);
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   .mobile-only {
     display: none;
