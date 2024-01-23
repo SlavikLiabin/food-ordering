@@ -221,6 +221,14 @@ header nav .menu ul li a:hover {
 
 header .search {
   background-color: var(--white-color);
+  height: 100%;
+  visibility: hidden;
+  transition: height 0.3s, visibility 0.3s;
+}
+
+.showsearch .search {
+  height: 60px;
+  visibility: inherit;
 }
 
 header .search input {
@@ -237,6 +245,26 @@ header .search input {
 
 header .search input::placeholder {
   color: var(--dark-color);
+}
+
+header .s-trigger i.ri-close-line,
+.showsearch header .s-trigger i.ri-search-line {
+  display: none;
+}
+
+.showsearch header .s-trigger i.ri-close-line {
+  display: block;
+}
+
+.showsearch header .s-trigger {
+  background-color: #ff25251a;
+  color: var(--secondary-color);
+  border-radius: 7px;
+  transition: var(--trans-back-co);
+}
+
+.showsearch header .s-trigger:hover {
+  background-color: #ff25254a;
 }
 
 @media screen and (min-width: 768px) {
