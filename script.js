@@ -31,3 +31,26 @@ const addclass = document.querySelector(".site");
 sTrigger.addEventListener("click", () => {
   addclass.classList.toggle("showsearch");
 });
+
+// -------slider
+
+const sliderThumb = new Swiper(".thumb-nav", {
+  spaceBetween: 10,
+  slidePerView: 3,
+  slidesPerGroup: false,
+  breakpoints: {
+    992: {
+      direction: "vertical",
+    },
+  },
+});
+
+const theSlider = new Swiper(".thumb-big", {
+  slidePerView: 1,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  thumbs: {
+    swiper: sliderThumb,
+  },
+});
