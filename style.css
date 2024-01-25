@@ -90,6 +90,22 @@ h4 {
   padding: 0;
   text-align: center;
 }
+
+.bg-primary,
+.bg-dark {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  z-index: -1; */
+}
+
+.bg-primary {
+  background-image: url(./assets/bg-primary.svg);
+}
 /* 01 HEADER */
 
 header {
@@ -341,10 +357,57 @@ main > div {
   width: 100%;
 }
 
-.thumb-nav {
+.slider .thumb-nav {
   width: 235px;
   padding: 5px;
 }
+
+.slider .thumb-nav .thumbnail {
+  width: 60px;
+  height: auto;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: box-shadow 0.3s, padding 0.3s;
+}
+
+.slider .swiper-slide-thumb-active .thumbnail {
+  padding: 5px;
+  box-shadow: 0 0 0 5px #cba926, 0 0 0 5px #e5be2b;
+}
+
+.slider .thumb-nav .item {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.slider .thumb-nav .item h4 {
+  font-size: 0.9em;
+  text-align: right;
+  color: var(--dark-color);
+  line-height: 1.2em;
+  display: none;
+}
+
+.slider .thumb-nav .item h4 span {
+  font-weight: 300;
+  font-size: 0.813em;
+}
+
+.slider .swiper-pagination {
+  position: relative;
+}
+
+.slider .swiper-pagination-bullet-active {
+  background-color: var(--dark-color);
+}
+
+.hero .bg-primary {
+  height: 600px;
+}
+
+/* slider transition */
 
 @media screen and (min-width: 768px) {
   .mobile-only {
@@ -387,5 +450,9 @@ main > div {
 
   :is(.slider .thumb-nav ul li) {
     height: 60px !important;
+  }
+
+  .slider .thumb-nav .item h4 {
+    display: block;
   }
 }
