@@ -510,6 +510,42 @@ main > div {
   transform: scale(1.1);
 }
 
+.cat-item ul li .qty {
+  font-family: system-ui;
+  position: absolute;
+  top: -10px;
+  line-height: 1;
+  left: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: left 0.3s;
+}
+
+.cat-item ul li:hover .qty {
+  left: 70%;
+}
+
+.cat-item ul li .qty strong {
+  font-size: 4em;
+  color: var(--light-color);
+  letter-spacing: -5px;
+}
+
+.cat-item ul li .qty span {
+  font-size: 0.813em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.categories .bg-primary{
+  height: 300px;
+  transform: rotate(180deg);
+  bottom: -300px;
+}
+
+/* 04 Tabbed products */
+
 @media screen and (min-width: 768px) {
   .mobile-only {
     display: none;
