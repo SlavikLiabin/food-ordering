@@ -75,7 +75,7 @@ const theTab = new Swiper(".tabbed-item", {
 
 // On scroll transition
 
-const io = new IntersectionObserver((entries) => {
+const io = new IntersectionObserver(entries => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
       entry.target.classList.add("this");
@@ -83,7 +83,8 @@ const io = new IntersectionObserver((entries) => {
   });
 });
 
-const box = document.querySelectorAll("animate");
+const box = document.querySelectorAll(".animate");
+console.log(box)
 box.forEach((el) => {
   io.observe(el);
 })
